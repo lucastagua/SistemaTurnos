@@ -1,0 +1,91 @@
+@model Turnos.Models.Medico
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Edit</title>
+</head>
+<body>
+
+<br>
+<h4>Medico</h4>
+<hr />
+<div class="row">
+    <div>
+        <form class="col s12" asp-action="Edit">
+            <div asp-validation-summary="ModelOnly"></div>
+            <input type="hidden" asp-for="IdMedico" />
+            <div class="row">
+
+                <div class="input-field col s6">
+                    <i class="material-icons prefix">account_circle</i>
+                    <input asp-for="Nombre" type="text" class="validate">
+                    <label asp-for="Nombre"></label>
+                    <span asp-validation-for="Nombre"></span>
+                </div>
+
+                <div class="input-field col s6">
+                    <input asp-for="Apellido" type="text" class="validate">
+                    <label asp-for="Apellido"></label>
+                    <span asp-validation-for="Apellido"></span>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">place</i>
+                    <input asp-for="Direccion" type="text" class="validate">
+                    <label asp-for="Direccion"></label>
+                    <span asp-validation-for="Direccion"></span>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">phone</i>
+                    <input asp-for="Telefono" type="tel" class="validate">
+                    <label asp-for="Telefono"></label>
+                    <span asp-validation-for="Telefono"></span>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">mail</i>
+                    <input asp-for="Email" type="email" class="validate">
+                    <label asp-for="Email"></label>
+                    <span asp-validation-for="Email"></span>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">watch_later</i>
+                    <input asp-for="HorarioAtencionDesde" type="text" class="timepicker">
+                    <label asp-for="HorarioAtencionDesde"></label>
+                    <span asp-validation-for="HorarioAtencionDesde"></span>
+                </div>
+
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">watch_later</i>
+                    <input asp-for="HorarioAtencionHasta" type="text" class="timepicker">
+                    <label asp-for="HorarioAtencionHasta"></label>
+                    <span asp-validation-for="HorarioAtencionHasta"></span>
+                </div>
+                
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">star_rate</i>
+                    @* "ViewBag" accede a la informacion del ViewData *@
+                    <select  name="IdEspecialidad" asp-items="ViewBag.ListaEspecialidadesEdit"></select> 
+                </div>
+                
+                <div class="row right-align">
+                    <div>
+                        <button class="btn waves-effect waves-light blue darken-1" type="submit" name="action">Guardar
+                            <i class="material-icons right">send</i>
+                        </button> |
+                        <a asp-action="Index" class="waves-effect waves-light btn blue darken-4">
+                        <i class="material-icons left">undo</i>Volver</a>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

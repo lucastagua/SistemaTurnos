@@ -1,0 +1,61 @@
+@model Turnos.Models.Medico
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+
+<br>
+<h4 class="center">¿Seguro desea Eliminar el siguiente Médico?</h4>
+<br>
+<div>
+    <h5>Médico</h5>
+    <hr />
+    <div class="row">
+        <div class="col s12 m12">
+            <div class="card hoverable blue darken-3">
+                <div class="card-content white-text">
+                    
+                    <h5 class="center card-title"><b>@Html.DisplayFor(model => model.Nombre) @Html.DisplayFor(model => model.Apellido)</b></h5>
+                    <br>  
+                    <dt>
+                        <h6>@Html.DisplayNameFor(model => model.Direccion):</h6> @Html.DisplayFor(model => model.Direccion)
+                    </dt>
+                    <hr/>
+                    <dt>
+                        <h6>@Html.DisplayNameFor(model => model.Telefono):</h6> @Html.DisplayFor(model => model.Telefono)
+                    </dt>
+                    <hr/>
+                    <dt>
+                        <h6>@Html.DisplayNameFor(model => model.Email):</h6> @Html.DisplayFor(model => model.Email)
+                    </dt>
+                    <hr/>
+                    <dt>
+                        <h6>@Html.DisplayNameFor(model => model.HorarioAtencionDesde):</h6> @Html.DisplayFor(model => model.HorarioAtencionDesde)
+                    </dt>
+                    <hr/>
+                    <dt>
+                        <h6>@Html.DisplayNameFor(model => model.HorarioAtencionHasta):</h6> @Html.DisplayFor(model => model.HorarioAtencionHasta)
+                    </dt>
+                </div>
+
+                <div class="card-action blue darken-4">
+                    <form asp-action="Delete">
+                        <input type="hidden" asp-for="IdMedico"/>
+                        <input type="submit" value="Eliminar" class="waves-effect waves-light btn-small red darken-1" />
+                        <a asp-action="Index" class="right waves-effect waves-light btn-small blue darken-1">
+                        <i class="material-icons left">undo</i>Volver</a>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>
