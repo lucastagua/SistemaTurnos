@@ -19,16 +19,16 @@ Aplicación para gestionar turnos (crear, editar, cancelar), con ABM de médicos
 ## Capturas
 
 - Vista Inicio
-![Vista Inicio](img/Sistematurnos.png)
+![Vista Inicio](Img/Sistematurnos.png)
 
 - Asignar Turno
-![Asignar Turno](img/Asignarturnos.png)
+![Asignar Turno](Img/Asignarturnos.png)
 
 - Agregar Medico
-![Agregar Medico](img/AgregarMedico.png)
+![Agregar Medico](Img/AgregarMedico.png)
 
 - Vista Paciente
-![Vista Pacientes](img/Vistapacientes.png)
+![Vista Pacientes](Img/Vistapacientes.png)
 
 ## Ejecutar local
 1. Configurá la cadena de conexión en `appsettings.json` o `appsettings.Development.json`.
