@@ -22,7 +22,7 @@ Aplicación para gestionar turnos (crear, editar, cancelar), con ABM de médicos
 ![Vista Inicio](Img/Sistematurnos.png)
 
 - Asignar Turno
-![Asignar Turno](Img/Asignacionturnos.png)
+![Asignar Turno](Img/Asisgnacionturnos.png)
 
 - Agregar Medico
 ![Agregar Medico](Img/Agregarmedico.png)
